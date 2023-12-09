@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "yourmodideas",
+  "version": "${version}",
+  "name": "Your Mod Ideas",
+  "description": "I put your ideas in the game!",
+  "authors": [
+    "SSBlur"
+  ],
+  "contact": {
+    "homepage": "https://github.com/ssblur/your-mod-ideas",
+    "sources": "https://github.com/ssblur/your-mod-ideas"
+  },
+  "license": "WTFPL",
+  "icon": "assets/yourmodideas/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.ssblur.yourmodideas.fabric.YourModIdeasFabric"
+    ]
+  },
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.20.1",
+    "architectury": ">=9.1.12"
+  }
+}
