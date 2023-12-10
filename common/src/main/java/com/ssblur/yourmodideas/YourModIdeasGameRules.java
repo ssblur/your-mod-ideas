@@ -6,8 +6,10 @@ import net.minecraft.world.level.GameRules.*;
 public class YourModIdeasGameRules {
   // Features from the second video
   public static Key<BooleanValue> EVIL_FOXES;
+  public static Key<BooleanValue> KILLER_SQUATS;
 
   public static void init() {
-    EVIL_FOXES = GameRules.register("yourModIdeas:evilFoxes", Category.UPDATES, BooleanValue.create(true));
+    EVIL_FOXES = GameRules.register("yourModIdeas:evilFoxes", Category.SPAWNING, BooleanValue.create(true));
+    KILLER_SQUATS = GameRules.register("yourModIdeas:killerSquats", Category.UPDATES, BooleanValue.create(false));
   }
 }
