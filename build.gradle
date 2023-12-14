@@ -70,7 +70,7 @@ allprojects {
             System.out.println("Signing jar...")
 
             def store = System.getenv("JAR_SIGNING_STORE")
-            def storeLoc = layout.buildDirectory.file("/store.jks").get()
+            def storeLoc = layout.buildDirectory.file("/store.jks").get().asFile
             def writer = new FileOutputStream(storeLoc)
             writer.write(Base64.getUrlDecoder().decode(store))
             writer.close()
