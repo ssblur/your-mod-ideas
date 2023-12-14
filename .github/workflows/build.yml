@@ -40,7 +40,7 @@ jobs:
           JAR_SIGNING_KEY_PASS: ${{ secrets.JAR_SIGNING_KEY_PASS }}
       - name: Cleanup
         run: |
-          rm */build/libs/scriptor-*-dev-shadow.jar
+          rm */build/libs/yourmodideas-*-dev-shadow.jar
           bash -c 'for file in fabric/build/libs/*.jar; do mv "$file" "${file%.jar}-fabric.jar"; done'
           bash -c 'for file in forge/build/libs/*.jar; do mv "$file" "${file%.jar}-forge.jar"; done'
       - name: Upload Artifact
@@ -48,8 +48,8 @@ jobs:
         with:
           name: Release
           path: |
-            fabric/build/libs/scriptor-*-sgd-*.jar
-            forge/build/libs/scriptor-*-sgd-*.jar
+            fabric/build/libs/yourmodideas-*-sgd-*.jar
+            forge/build/libs/yourmodideas-*-sgd-*.jar
             modkey.cer
       - name: "Release"
         uses: "marvinpinto/action-automatic-releases@latest"
@@ -57,8 +57,8 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           files: |
-            fabric/build/libs/scriptor-*-sgd-*.jar
-            forge/build/libs/scriptor-*-sgd-*.jar
+            fabric/build/libs/yourmodideas-*-sgd-*.jar
+            forge/build/libs/yourmodideas-*-sgd-*.jar
             modkey.cer
       - name: Extract Tag Version
         id: tag
@@ -66,7 +66,7 @@ jobs:
       - name: "Upload Fabric to CurseForge"
         uses: itsmeow/curseforge-upload@v3
         with:
-          file_path: fabric/build/libs/scriptor-${{ steps.tag.outputs.version }}-sgd-fabric.jar
+          file_path: fabric/build/libs/yourmodideas-${{ steps.tag.outputs.version }}-sgd-fabric.jar
           game_endpoint: "minecraft"
           relations: "fabric-api:requiredDependency,architectury-api:requiredDependency,patchouli-fabric:optionalDependency"
           game_versions: "Minecraft 1.20:1.20.2,Java 17,Java 18,Fabric,Client,Server"
@@ -79,7 +79,7 @@ jobs:
       - name: "Upload Forge to CurseForge"
         uses: itsmeow/curseforge-upload@v3
         with:
-          file_path: forge/build/libs/scriptor-${{ steps.tag.outputs.version }}-sgd-forge.jar
+          file_path: forge/build/libs/yourmodideas-${{ steps.tag.outputs.version }}-sgd-forge.jar
           game_endpoint: "minecraft"
           relations: "architectury-api:requiredDependency,patchouli:optionalDependency"
           game_versions: "Minecraft 1.20:1.20.2,Java 17,Java 18,Forge,Client,Server"
