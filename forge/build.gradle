@@ -1,11 +1,29 @@
 plugins {
   id "com.github.johnrengelman.shadow" version "7.1.2"
+    id "com.modrinth.minotaur" version "2.+"
 }
 
 architectury {
   platformSetupLoomIde()
   forge()
 }
+
+modrinth {
+    token = System.getenv("MODRINTH_TOKEN")
+    projectId = "one-billion-things"
+    versionNumber = version
+    versionName = version + "-FORGE"
+    changelog = (System.getenv("CHANGELOG") ?: "Could not load changelog").replace("\n", "\n\n")
+    versionType = "beta"
+    uploadFile = tasks.named("signedJar").get().outputs.files.singleFile
+    gameVersions = [rootProject.minecraft_version]
+    loaders = ["forge"]
+    dependencies {
+        required.project "architectury-api"
+        optional.project "patchouli"
+    }
+}
+tasks.modrinth.dependsOn tasks.named("signedJar")
 
 loom {
   accessWidenerPath = project(":common").loom.accessWidenerPath

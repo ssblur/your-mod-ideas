@@ -1,9 +1,9 @@
-# One Billion Mods
+# One Billion Things
 *A Collection of your mod ideas*
 
-## What is One Billion Mods?
+## What is One Billion Things?
 
-One Billion Mods is a mod that collects various suggestions provided through
+One Billion Things is a mod that collects various suggestions provided through
 [YouTube comments](http://yt.blur.lol) 
 and [my Discord server](http://dc.blur.lol).
 
