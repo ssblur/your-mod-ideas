@@ -69,7 +69,7 @@ jobs:
           file_path: fabric/build/libs/yourmodideas-${{ steps.tag.outputs.version }}-sgd-fabric.jar
           game_endpoint: "minecraft"
           relations: "fabric-api:requiredDependency,architectury-api:requiredDependency"
-          game_versions: "Minecraft 1.20:1.20.2,Java 17,Java 18,Fabric,Client,Server"
+          game_versions: "Minecraft 1.20:1.20.4,Java 17,Java 18,Fabric,Client,Server"
           project_id: "949016"
           token: "${{ secrets.CURSEFORGE_TOKEN }}"
           changelog_type: text
@@ -82,7 +82,7 @@ jobs:
           file_path: forge/build/libs/yourmodideas-${{ steps.tag.outputs.version }}-sgd-forge.jar
           game_endpoint: "minecraft"
           relations: "architectury-api:requiredDependency"
-          game_versions: "Minecraft 1.20:1.20.2,Java 17,Java 18,Forge,Client,Server"
+          game_versions: "Minecraft 1.20:1.20.4,Java 17,Java 18,Forge,Client,Server"
           project_id: "949016"
           token: "${{ secrets.CURSEFORGE_TOKEN }}"
           changelog_type: text
