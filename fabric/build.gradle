@@ -17,7 +17,7 @@ modrinth {
     versionType = "beta"
     uploadFile = tasks.named("signedJar").get().outputs.files.singleFile
     gameVersions = [rootProject.minecraft_version]
-    loaders = ["forge"]
+    loaders = ["fabric"]
     dependencies {
         required.project "architectury-api"
         optional.project "patchouli"
