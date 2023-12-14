@@ -12,6 +12,17 @@ a game rule, and most are disabled by default.
 This is a showcase mod more than anything, so it isn't built to be 
 usable outright in survival.
 
+## What's in so far?
+
+Lots of things! So far, you can:
+
+* Enchant items with un-mending
+* Get robbed by foxes
+* Milk anything
+* Squat yourself to death
+* And more!
+
+
 ## Questions
 
 **Can you add [idea]?**
