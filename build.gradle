@@ -57,8 +57,7 @@ allprojects {
     }
 
     tasks.register("signedJar") {
-        def output = layout.buildDirectory.toPath()
-                .resolve("libs")
+        def output = layout.buildDirectory.dir("libs")
                 .resolve(remapJar.archiveFileName.get().replace(".jar", "-sgd.jar"))
                 .toString()
 
@@ -70,7 +69,7 @@ allprojects {
             System.out.println("Signing jar...")
 
             def store = System.getenv("JAR_SIGNING_STORE")
-            def storeLoc = new File(layout.buildDirectory + "/store.jks")
+            def storeLoc = new File(layout.buildDirectory.file("/store.jks"))
             def writer = new FileOutputStream(storeLoc)
             writer.write(Base64.getUrlDecoder().decode(store))
             writer.close()
@@ -79,8 +78,7 @@ allprojects {
             def storePass = System.getenv("JAR_SIGNING_STORE_PASS")
             def keyPass = System.getenv("JAR_SIGNING_KEY_PASS")
 
-            def input = layout.buildDirectory.toPath()
-                    .resolve("libs")
+            def input = layout.buildDirectory.dir("libs")
                     .resolve(remapJar.archiveFileName.get())
                     .toString()
             def jarsigner = [
