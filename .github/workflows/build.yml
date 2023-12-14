@@ -40,7 +40,6 @@ jobs:
           JAR_SIGNING_KEY_PASS: ${{ secrets.JAR_SIGNING_KEY_PASS }}
       - name: Cleanup
         run: |
-          ls -la */build/libs
           rm */build/libs/yourmodideas-*-dev-shadow.jar
           bash -c 'for file in fabric/build/libs/*.jar; do mv "$file" "${file%.jar}-fabric.jar"; done'
           bash -c 'for file in forge/build/libs/*.jar; do mv "$file" "${file%.jar}-forge.jar"; done'
