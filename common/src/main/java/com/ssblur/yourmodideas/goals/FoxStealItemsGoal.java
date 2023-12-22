@@ -1,5 +1,6 @@
 package com.ssblur.yourmodideas.goals;
 
+import com.ssblur.yourmodideas.YourModIdeasGameRules;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.goal.Goal;
@@ -28,6 +29,7 @@ public class FoxStealItemsGoal extends Goal {
   }
 
   public void tick() {
+    if(!fox.level().getGameRules().getBoolean(YourModIdeasGameRules.EVIL_FOXES)) return;
     List<Player> list = fox.level().getEntitiesOfClass(Player.class, fox.getBoundingBox().inflate(8.0, 8.0, 8.0));
     ItemStack itemStack = fox.getItemBySlot(EquipmentSlot.MAINHAND);
     if (itemStack.isEmpty() && !list.isEmpty()) {
