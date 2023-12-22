@@ -15,10 +15,8 @@ public class EntitySpawnedEvent implements EntityEvent.Add {
   static Random random = new Random();
   @Override
   public EventResult add(Entity entity, Level level) {
-    if(level.getGameRules().getBoolean(YourModIdeasGameRules.EVIL_FOXES))
-      if(entity instanceof Fox fox && random.nextFloat() < 0.1f) {
-        fox.goalSelector.addGoal(3, new FoxStealItemsGoal(fox));
-      }
+    if(entity instanceof Fox fox && random.nextFloat() < 0.1f)
+      fox.goalSelector.addGoal(3, new FoxStealItemsGoal(fox));
     return EventResult.pass();
   }
 }
