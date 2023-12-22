@@ -6,6 +6,7 @@
   "block.yourmodideas.error_block": "models/error.mdl",
 
   "item.yourmodideas.milk": "%1$s Milk",
+  "item.yourmodideas.bucketed_block": "Bucket o' %1$s",
 
   "death.attack.squat": "%1$s squatted too hard.",
 
