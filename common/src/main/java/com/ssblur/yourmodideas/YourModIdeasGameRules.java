@@ -10,6 +10,7 @@ public class YourModIdeasGameRules {
   public static Key<BooleanValue> INSOMNIA;
   public static Key<BooleanValue> MILK_EVERYTHING;
   public static Key<BooleanValue> UNMENDING_ENCHANT;
+  public static Key<BooleanValue> BUCKET_SAND;
 
   public static boolean UNMENDING_ENCHANT_FLAG;
 
@@ -17,7 +18,8 @@ public class YourModIdeasGameRules {
     EVIL_FOXES = GameRules.register("yourModIdeas:evilFoxes", Category.SPAWNING, BooleanValue.create(true));
     KILLER_SQUATS = GameRules.register("yourModIdeas:killerSquats", Category.UPDATES, BooleanValue.create(false));
     INSOMNIA = GameRules.register("yourModIdeas:insomnia", Category.PLAYER, BooleanValue.create(false));
-    MILK_EVERYTHING = GameRules.register("yourModIdeas:milkEverything", Category.PLAYER, BooleanValue.create(false));
-    UNMENDING_ENCHANT = GameRules.register("yourModIdeas:unmendingEnchant", Category.PLAYER, BooleanValue.create(false));
+    MILK_EVERYTHING = GameRules.register("yourModIdeas:milkEverything", Category.MOBS, BooleanValue.create(false));
+    UNMENDING_ENCHANT = GameRules.register("yourModIdeas:unmendingEnchant", Category.MISC, BooleanValue.create(false));
+    BUCKET_SAND = GameRules.register("yourModIdeas:bucketSand", Category.MISC, BooleanValue.create(false));
   }
 }

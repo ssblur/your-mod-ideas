@@ -2,6 +2,8 @@
   "itemGroup.yourmodideas.your_mod_ideas": "Your Mod Ideas",
 
   "block.yourmodideas.froggy_chair": "Froggy Chair",
+  "block.yourmodideas.missing_texture_block": "hl2/materials/debug/debugempty",
+  "block.yourmodideas.error_block": "models/error.mdl",
 
   "item.yourmodideas.milk": "%1$s Milk",
 

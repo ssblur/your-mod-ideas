@@ -15,6 +15,10 @@ public class YourModIdeasBlocks {
 
   public static final RegistrySupplier<Block> FROGGY_CHAIR = BLOCKS.register("froggy_chair", () ->
     new FurnitureBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)));
+  public static final RegistrySupplier<Block> ERROR_BLOCK = BLOCKS.register("error_block", () ->
+    new FurnitureBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)));
+  public static final RegistrySupplier<Block> MISSING_TEXTURE_BLOCK = BLOCKS.register("missing_texture_block", () ->
+    new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)));
 
   public static void register() {
     BLOCKS.register();
