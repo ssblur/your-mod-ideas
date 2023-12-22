@@ -11,6 +11,9 @@
   "death.attack.squat": "%1$s squatted too hard.",
 
   "message.yourmodideas.insomnia": "You may not rest now; You have insomnia.",
+  "message.yourmodideas.no_milk_0": "Are you really trying to milk that? You sick freak.",
+  "message.yourmodideas.no_milk_1": "Are you really trying to milk that? What's wrong with you?",
+  "message.yourmodideas.no_milk_2": "Why would you want to milk that?",
 
   "enchantment.yourmodideas.unmending": "Curse of UnMending"
 }

@@ -7,15 +7,26 @@ import dev.architectury.event.events.common.InteractionEvent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.animal.Cow;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
+import java.util.Random;
+
 public class EntityInteractEvent implements InteractionEvent.InteractEntity {
+  Random random = new Random();
   @Override
   public EventResult interact(Player player, Entity entity, InteractionHand hand) {
     var level = player.level();
+    if(level.getGameRules().getBoolean(YourModIdeasGameRules.BUCKET_SAND))
+      if(player.getItemInHand(hand).is(Items.BUCKET))
+        if(level.getGameRules().getBoolean(YourModIdeasGameRules.MILK_EVERYTHING) || entity instanceof Cow) {
+          player.displayClientMessage(Component.translatable("message.yourmodideas.no_milk_" + random.nextInt(3)), true);
+          return EventResult.interruptTrue();
+        }
+
     if(level.getGameRules().getBoolean(YourModIdeasGameRules.BUCKET_SAND))
       if(player.getItemInHand(hand).is(Items.BUCKET) && entity instanceof FallingBlockEntity fallingBlock) {
         var item = new ItemStack(YourModIdeasItems.BUCKETED_BLOCK.get());
@@ -31,6 +42,7 @@ public class EntityInteractEvent implements InteractionEvent.InteractEntity {
         player.getCooldowns().addCooldown(YourModIdeasItems.BUCKETED_BLOCK.get(), 1);
         return EventResult.interruptTrue();
       }
+
     if(level.getGameRules().getBoolean(YourModIdeasGameRules.MILK_EVERYTHING))
       if(player.getItemInHand(hand).is(Items.BUCKET)) {
         var item = new ItemStack(Items.MILK_BUCKET);

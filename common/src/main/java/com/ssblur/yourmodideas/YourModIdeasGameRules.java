@@ -11,6 +11,7 @@ public class YourModIdeasGameRules {
   public static Key<BooleanValue> MILK_EVERYTHING;
   public static Key<BooleanValue> UNMENDING_ENCHANT;
   public static Key<BooleanValue> BUCKET_SAND;
+  public static Key<BooleanValue> NO_MILKABLE;
 
   public static boolean UNMENDING_ENCHANT_FLAG;
 
@@ -21,5 +22,6 @@ public class YourModIdeasGameRules {
     MILK_EVERYTHING = GameRules.register("yourModIdeas:milkEverything", Category.MOBS, BooleanValue.create(false));
     UNMENDING_ENCHANT = GameRules.register("yourModIdeas:unmendingEnchant", Category.MISC, BooleanValue.create(false));
     BUCKET_SAND = GameRules.register("yourModIdeas:bucketSand", Category.MISC, BooleanValue.create(false));
+    NO_MILKABLE = GameRules.register("yourModIdeas:milkNothing", Category.MOBS, BooleanValue.create(false));
   }
 }
