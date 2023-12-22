@@ -31,8 +31,8 @@ loom {
     convertAccessWideners = true
     extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
 
-  mixinConfig "yourmodideas-common.mixins.json"
-  mixinConfig "yourmodideas.mixins.json"
+    mixinConfig "yourmodideas-common.mixins.json"
+    mixinConfig "yourmodideas.mixins.json"
   }
 }
 
