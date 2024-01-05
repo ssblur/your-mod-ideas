@@ -20,7 +20,6 @@ modrinth {
   loaders = ["fabric"]
   dependencies {
       required.project "architectury-api"
-      optional.project "patchouli"
   }
   syncBodyFrom = rootProject.file("README.md").text
 }
