@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Mod Version (e.g. Fabric 1.0.0)**:
+**Mod Version (e.g. Fabric 1.0.0 for MC 1.20.4)**:
 
 **What you expect to happen**:
 A brief description of what you think should happen.
