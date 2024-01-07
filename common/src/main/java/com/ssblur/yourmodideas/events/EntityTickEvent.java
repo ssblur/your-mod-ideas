@@ -14,7 +14,7 @@ public class EntityTickEvent implements TickEvent.Player {
   @Override
   public void tick(net.minecraft.world.entity.player.Player player) {
     var level = player.level();
-    if(level.getGameRules().getBoolean(YourModIdeasGameRules.KILLER_SQUATS))
+    if(YourModIdeasGameRules.getValue(level, YourModIdeasGameRules.KILLER_SQUATS))
       if(player.isCrouching()) {
         timers.put(player, timers.getOrDefault(player, random.nextInt(120) + 20) - 1);
         if(timers.get(player) <= 0)

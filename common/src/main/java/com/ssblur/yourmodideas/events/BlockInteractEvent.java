@@ -14,7 +14,7 @@ public class BlockInteractEvent implements InteractionEvent.RightClickBlock {
   @Override
   public EventResult click(Player player, InteractionHand hand, BlockPos pos, Direction face) {
     var level = player.level();
-    if(level.getGameRules().getBoolean(YourModIdeasGameRules.INSOMNIA))
+    if(YourModIdeasGameRules.getValue(level, YourModIdeasGameRules.INSOMNIA))
       if(level.getBlockState(pos).getBlock() instanceof BedBlock) {
         player.displayClientMessage(Component.translatable("message.yourmodideas.insomnia"), true);
         return EventResult.interruptFalse();

@@ -15,7 +15,7 @@ public class EntityHurtEvent implements EntityEvent.LivingHurt {
   @Override
   public EventResult hurt(LivingEntity entity, DamageSource source, float amount) {
     var level = entity.level();
-    if(level.getGameRules().getBoolean(YourModIdeasGameRules.INSOMNIA)) {
+    if(YourModIdeasGameRules.getValue(level, YourModIdeasGameRules.INSOMNIA)) {
       if (entity instanceof Phantom && source.is(DamageTypes.ON_FIRE)) {
         entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, Integer.MAX_VALUE, 0, true, false));
         entity.setRemainingFireTicks(0);

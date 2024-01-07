@@ -20,14 +20,14 @@ public class EntityInteractEvent implements InteractionEvent.InteractEntity {
   @Override
   public EventResult interact(Player player, Entity entity, InteractionHand hand) {
     var level = player.level();
-    if(level.getGameRules().getBoolean(YourModIdeasGameRules.BUCKET_SAND))
+    if(YourModIdeasGameRules.getValue(level, YourModIdeasGameRules.NO_MILKABLE))
       if(player.getItemInHand(hand).is(Items.BUCKET))
-        if(level.getGameRules().getBoolean(YourModIdeasGameRules.MILK_EVERYTHING) || entity instanceof Cow) {
+        if(YourModIdeasGameRules.getValue(level, YourModIdeasGameRules.MILK_EVERYTHING) || entity instanceof Cow) {
           player.displayClientMessage(Component.translatable("message.yourmodideas.no_milk_" + random.nextInt(3)), true);
           return EventResult.interruptTrue();
         }
 
-    if(level.getGameRules().getBoolean(YourModIdeasGameRules.BUCKET_SAND))
+    if(YourModIdeasGameRules.getValue(level, YourModIdeasGameRules.BUCKET_SAND))
       if(player.getItemInHand(hand).is(Items.BUCKET) && entity instanceof FallingBlockEntity fallingBlock) {
         var item = new ItemStack(YourModIdeasItems.BUCKETED_BLOCK.get());
         entity.save(item.getOrCreateTag());
@@ -43,7 +43,7 @@ public class EntityInteractEvent implements InteractionEvent.InteractEntity {
         return EventResult.interruptTrue();
       }
 
-    if(level.getGameRules().getBoolean(YourModIdeasGameRules.MILK_EVERYTHING))
+    if(YourModIdeasGameRules.getValue(level, YourModIdeasGameRules.MILK_EVERYTHING))
       if(player.getItemInHand(hand).is(Items.BUCKET)) {
         var item = new ItemStack(Items.MILK_BUCKET);
         item.setHoverName(Component.translatable("item.yourmodideas.milk", entity.getName()));
