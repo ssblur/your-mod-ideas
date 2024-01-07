@@ -29,5 +29,7 @@ public class YourModIdeasItems {
   public static void register() {
     TABS.register();
     ITEMS.register();
+
+    YourModIdeasInstruments.register();
   }
 }
