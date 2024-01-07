@@ -11,6 +11,8 @@ public class YourModIdeasGameRules {
   public static Key<BooleanValue> INSOMNIA;
   public static Key<BooleanValue> MILK_EVERYTHING;
   public static Key<BooleanValue> UNMENDING_ENCHANT;
+
+  // Features from the third video
   public static Key<BooleanValue> BUCKET_SAND;
   public static Key<BooleanValue> NO_MILKABLE;
   public static Key<BooleanValue> HELL_MODE;
