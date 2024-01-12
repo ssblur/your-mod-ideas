@@ -22,6 +22,8 @@ public class YourModIdeasItems {
     new BucketedBlock(new Item.Properties()));
   public static final RegistrySupplier<Item> FROGGY_CHAIR = ITEMS.register("froggy_chair", () ->
     new BlockItem(YourModIdeasBlocks.FROGGY_CHAIR.get(), new Item.Properties().arch$tab(TAB)));
+  public static final RegistrySupplier<Item> EVIL_FROGGY_CHAIR = ITEMS.register("evil_froggy_chair", () ->
+    new BlockItem(YourModIdeasBlocks.EVIL_FROGGY_CHAIR.get(), new Item.Properties().arch$tab(TAB)));
   public static final RegistrySupplier<Item> ERROR_BLOCK = ITEMS.register("error_block", () ->
     new BlockItem(YourModIdeasBlocks.ERROR_BLOCK.get(), new Item.Properties().arch$tab(TAB)));
   public static final RegistrySupplier<Item> MISSING_TEXTURE_BLOCK = ITEMS.register("missing_texture_block", () ->
