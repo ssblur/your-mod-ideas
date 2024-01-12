@@ -2,6 +2,7 @@
   "itemGroup.yourmodideas.your_mod_ideas": "Your Mod Ideas",
 
   "block.yourmodideas.froggy_chair": "Froggy Chair",
+  "block.yourmodideas.evil_froggy_chair": "Froggy Chair (Evil)",
   "block.yourmodideas.missing_texture_block": "hl2/materials/debug/debugempty",
   "block.yourmodideas.error_block": "models/error.mdl",
 
@@ -17,5 +18,11 @@
   "message.yourmodideas.no_milk_1": "Are you really trying to milk that? What's wrong with you?",
   "message.yourmodideas.no_milk_2": "Why would you want to milk that?",
 
-  "enchantment.yourmodideas.unmending": "Curse of UnMending"
+  "enchantment.yourmodideas.unmending": "Curse of UnMending",
+
+  "itemDesc.yourmodideas.bucketed_block": "The bucket is actually just a helmet with no holes.",
+  "itemDesc.yourmodideas.froggy_chair": "Why would you want to sit on him?",
+  "itemDesc.yourmodideas.evil_froggy_chair": "I think the eyebrows are painted on.",
+  "itemDesc.yourmodideas.missing_texture_block": "Please install Counter Strike: Source.",
+  "itemDesc.yourmodideas.error_block": "If you see errors, download our Workshop collection!"
 }
