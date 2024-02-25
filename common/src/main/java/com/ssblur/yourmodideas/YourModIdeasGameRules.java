@@ -29,7 +29,12 @@ public class YourModIdeasGameRules {
   public static Key<BooleanValue> TOOLTIPS;
   public static Key<BooleanValue> HELL_MODE;
 
+  // Features from the fourth video
+  public static Key<BooleanValue> EAT_SAND;
+
+
   public static boolean UNMENDING_ENCHANT_FLAG;
+  public static boolean EAT_SAND_FLAG;
 
   public static void init() {
     EVIL_FOXES = register("yourModIdeas:evilFoxes");
@@ -40,6 +45,7 @@ public class YourModIdeasGameRules {
     BUCKET_SAND = register("yourModIdeas:bucketSand");
     NO_MILKABLE = register("yourModIdeas:milkNothing");
     TOOLTIPS = register("yourModIdeas:tooltips", true);
+    EAT_SAND = register("yourModIdeas:eatSand", true);
 
     HELL_MODE = register("yourModIdeas:hellMode", true);
   }
