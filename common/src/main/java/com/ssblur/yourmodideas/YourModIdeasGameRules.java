@@ -33,6 +33,7 @@ public class YourModIdeasGameRules {
   public static Key<BooleanValue> EAT_SAND;
   public static Key<BooleanValue> EMOTIONAL_DAMAGE;
   public static Key<BooleanValue> FAST_WITHER_SKELETONS;
+  public static Key<BooleanValue> BABABOOEY;
 
 
   public static boolean UNMENDING_ENCHANT_FLAG;
@@ -50,6 +51,7 @@ public class YourModIdeasGameRules {
     EAT_SAND = register("yourModIdeas:eatSand", true);
     EMOTIONAL_DAMAGE = register("yourModIdeas:emotionalDamage");
     FAST_WITHER_SKELETONS = register("yourModIdeas:fastWitherSkeletons");
+    BABABOOEY = register("yourModIdeas:bababooey");
 
     HELL_MODE = register("yourModIdeas:hellMode", true);
   }
