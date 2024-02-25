@@ -18,6 +18,21 @@
   "message.yourmodideas.no_milk_1": "Are you really trying to milk that? What's wrong with you?",
   "message.yourmodideas.no_milk_2": "Why would you want to milk that?",
 
+  "message.yourmodideas.emotional_damage_fall_0": "Aww, you fell? What, is the ground too tough for you?",
+  "message.yourmodideas.emotional_damage_fall_1": "You didn't just fall, you fell off.",
+  "message.yourmodideas.emotional_damage_fall_2": "Couldn't find the stairs?",
+  "message.yourmodideas.emotional_damage_mob_0": "Just don't get hit, easy.",
+  "message.yourmodideas.emotional_damage_mob_1": "Reminder: they aren't your friend.",
+  "message.yourmodideas.emotional_damage_drown_0": "Hey, just a tip: YOU CAN'T BREATHE WATER",
+  "message.yourmodideas.emotional_damage_drown_1": "You know you don't have gills, right?",
+  "message.yourmodideas.emotional_damage_drown_2": "Remember to pack the water breathing potion next time.",
+  "message.yourmodideas.emotional_damage_drown_3": "At this rate, you'll become a Drowned.",
+  "message.yourmodideas.emotional_damage_drown_4": "You really suck at breathing.",
+  "message.yourmodideas.emotional_damage_drown_5": "Maybe try breathing air instead next time.",
+  "message.yourmodideas.emotional_damage_genericKill_0": "Someone really hates you, huh?",
+  "message.yourmodideas.emotional_damage_lava_0": "Good job, you managed to fall into one of the most visible hazards in existence. Nice going.",
+  "message.yourmodideas.emotional_damage_onFire_0": "Bet you think you're hot stuff. You ain't nothing.",
+
   "enchantment.yourmodideas.unmending": "Curse of UnMending",
 
   "itemDesc.yourmodideas.bucketed_block": "The bucket is actually just a helmet with no holes.",

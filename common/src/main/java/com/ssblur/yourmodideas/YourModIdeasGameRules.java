@@ -31,6 +31,7 @@ public class YourModIdeasGameRules {
 
   // Features from the fourth video
   public static Key<BooleanValue> EAT_SAND;
+  public static Key<BooleanValue> EMOTIONAL_DAMAGE;
 
 
   public static boolean UNMENDING_ENCHANT_FLAG;
@@ -46,6 +47,7 @@ public class YourModIdeasGameRules {
     NO_MILKABLE = register("yourModIdeas:milkNothing");
     TOOLTIPS = register("yourModIdeas:tooltips", true);
     EAT_SAND = register("yourModIdeas:eatSand", true);
+    EMOTIONAL_DAMAGE = register("yourModIdeas:emotionalDamage");
 
     HELL_MODE = register("yourModIdeas:hellMode", true);
   }
