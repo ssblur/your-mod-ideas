@@ -32,6 +32,7 @@ public class YourModIdeasGameRules {
   // Features from the fourth video
   public static Key<BooleanValue> EAT_SAND;
   public static Key<BooleanValue> EMOTIONAL_DAMAGE;
+  public static Key<BooleanValue> FAST_WITHER_SKELETONS;
 
 
   public static boolean UNMENDING_ENCHANT_FLAG;
@@ -48,6 +49,7 @@ public class YourModIdeasGameRules {
     TOOLTIPS = register("yourModIdeas:tooltips", true);
     EAT_SAND = register("yourModIdeas:eatSand", true);
     EMOTIONAL_DAMAGE = register("yourModIdeas:emotionalDamage");
+    FAST_WITHER_SKELETONS = register("yourModIdeas:fastWitherSkeletons");
 
     HELL_MODE = register("yourModIdeas:hellMode", true);
   }
