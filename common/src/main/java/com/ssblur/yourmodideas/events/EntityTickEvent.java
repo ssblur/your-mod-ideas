@@ -9,6 +9,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.phys.HitResult;
@@ -43,6 +44,17 @@ public class EntityTickEvent implements TickEvent.Player {
           if (result.getType() == HitResult.Type.MISS)
             player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200));
         }
+      }
+    }
+
+    if(YourModIdeasGameRules.getValue(level, YourModIdeasGameRules.INVENTORY_SHIFT)) {
+      if(level.getGameTime() % 40 == 0) {
+        var inventory = player.getInventory();
+        ItemStack first = inventory.getItem(0);
+        for (int i = 1; i < inventory.getContainerSize(); i++) {
+          inventory.setItem(i - 1, inventory.getItem(i));
+        }
+        inventory.setItem(inventory.getContainerSize() - 1, first);
       }
     }
   }
