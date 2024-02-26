@@ -34,6 +34,7 @@ public class YourModIdeasGameRules {
   public static Key<BooleanValue> EMOTIONAL_DAMAGE;
   public static Key<BooleanValue> FAST_WITHER_SKELETONS;
   public static Key<BooleanValue> BABABOOEY;
+  public static Key<BooleanValue> SUN_BLINDNESS;
 
 
   public static boolean UNMENDING_ENCHANT_FLAG;
@@ -52,6 +53,7 @@ public class YourModIdeasGameRules {
     EMOTIONAL_DAMAGE = register("yourModIdeas:emotionalDamage");
     FAST_WITHER_SKELETONS = register("yourModIdeas:fastWitherSkeletons");
     BABABOOEY = register("yourModIdeas:bababooey");
+    SUN_BLINDNESS = register("yourModIdeas:sunBlindness");
 
     HELL_MODE = register("yourModIdeas:hellMode", true);
   }
