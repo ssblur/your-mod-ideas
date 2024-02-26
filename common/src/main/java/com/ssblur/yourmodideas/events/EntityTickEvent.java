@@ -9,6 +9,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
@@ -33,13 +34,12 @@ public class EntityTickEvent implements TickEvent.Player {
       }
 
     if(YourModIdeasGameRules.getValue(level, YourModIdeasGameRules.SUN_BLINDNESS)) {
-      if (level.dimensionType().bedWorks() && !level.isRaining()) {
-        float angle = level.getSunAngle(0f) + (float) (Math.PI / 2);
+      if (level.dimension() == Level.OVERWORLD && !level.isRaining()) {
         Vec3 eyeVec = player.getViewVector(0f);
+        float angle = level.getSunAngle(0f) + (float) (Math.PI / 2);
         Vec3 sunVec = new Vec3(Mth.cos(angle), Mth.sin(angle), 0.0);
-        double product = eyeVec.dot(sunVec);
-        if (product > 0.98) {
-          HitResult result = player.pick(512.0, Minecraft.getInstance().getFrameTime(), true);
+        if (eyeVec.dot(sunVec) > 0.98) {
+          HitResult result = player.pick(512.0, 0, true);
           if (result.getType() == HitResult.Type.MISS)
             player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200));
         }
