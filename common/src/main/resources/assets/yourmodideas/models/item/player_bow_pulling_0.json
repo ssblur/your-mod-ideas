@@ -1,0 +1,6 @@
+{
+    "parent": "yourmodideas:item/player_bow",
+    "textures": {
+        "layer0": "yourmodideas:item/player_bow_pulling_0"
+    }
+}
