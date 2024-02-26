@@ -9,7 +9,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.phys.HitResult;
@@ -55,6 +56,32 @@ public class EntityTickEvent implements TickEvent.Player {
           inventory.setItem(i - 1, inventory.getItem(i));
         }
         inventory.setItem(inventory.getContainerSize() - 1, first);
+      }
+    }
+
+    if(YourModIdeasGameRules.getValue(level, YourModIdeasGameRules.DEDICATED_SLOTS)) {
+      if(level.getGameTime() % 10 == 0) {
+        var inventory = player.getInventory();
+        for (int i = 0; i < inventory.getContainerSize(); i++) {
+          var item = inventory.getItem(i);
+          if(item.getItem() instanceof SwordItem && i != 0) {
+            item.setDamageValue(item.getDamageValue() + 1);
+            if (item.getDamageValue() >= item.getMaxDamage())
+              inventory.setItem(i, ItemStack.EMPTY);
+          } else if(item.getItem() instanceof AxeItem && i != 1) {
+            item.setDamageValue(item.getDamageValue() + 1);
+            if (item.getDamageValue() >= item.getMaxDamage())
+              inventory.setItem(i, ItemStack.EMPTY);
+          } else if(item.getItem() instanceof PickaxeItem && i != 2) {
+            item.setDamageValue(item.getDamageValue() + 1);
+            if (item.getDamageValue() >= item.getMaxDamage())
+              inventory.setItem(i, ItemStack.EMPTY);
+          } else if(item.getItem() instanceof ShovelItem && i != 3) {
+            item.setDamageValue(item.getDamageValue() + 1);
+            if (item.getDamageValue() >= item.getMaxDamage())
+              inventory.setItem(i, ItemStack.EMPTY);
+          }
+        }
       }
     }
   }

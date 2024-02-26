@@ -3,11 +3,13 @@
   "package": "com.ssblur.yourmodideas.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "IsEdibleMixin",
     "ExperienceOrbDamageUnMendingMixin",
+    "IsEdibleMixin",
     "RemoveDisabledEnchantsMixin"
   ],
-  "client": [],
+  "client": [
+    "DrawInventoryMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },

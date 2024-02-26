@@ -2,6 +2,7 @@ package com.ssblur.yourmodideas.events;
 
 import com.ssblur.yourmodideas.YourModIdeas;
 import com.ssblur.yourmodideas.events.network.SyncedRules;
+import dev.architectury.event.events.client.ClientGuiEvent;
 import dev.architectury.event.events.client.ClientTooltipEvent;
 import dev.architectury.event.events.common.*;
 import dev.architectury.networking.NetworkManager;
@@ -26,6 +27,8 @@ public class YourModIdeasEvents {
 
     if(Platform.getEnv() == EnvType.CLIENT) {
       NetworkManager.registerReceiver(NetworkManager.Side.S2C, SYNC_MESSAGE, SyncedRules::receive);
+
+      ClientGuiEvent.RENDER_HUD.register(new DrawHUDEvent());
     }
   }
 }

@@ -36,6 +36,7 @@ public class YourModIdeasGameRules {
   public static Key<BooleanValue> BABABOOEY;
   public static Key<BooleanValue> SUN_BLINDNESS;
   public static Key<BooleanValue> INVENTORY_SHIFT;
+  public static Key<BooleanValue> DEDICATED_SLOTS;
 
 
   public static boolean UNMENDING_ENCHANT_FLAG;
@@ -56,6 +57,7 @@ public class YourModIdeasGameRules {
     BABABOOEY = register("yourModIdeas:bababooey");
     SUN_BLINDNESS = register("yourModIdeas:sunBlindness");
     INVENTORY_SHIFT = register("yourModIdeas:inventoryShift");
+    DEDICATED_SLOTS = register("yourModIdeas:dedicatedSlots", true);
 
     HELL_MODE = register("yourModIdeas:hellMode", true);
   }
