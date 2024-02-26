@@ -47,8 +47,6 @@ public class EntityHurtEvent implements EntityEvent.LivingHurt {
             total++;
 
           player.sendSystemMessage(Component.translatable("message.yourmodideas.emotional_damage_%s_%d".formatted(source.getMsgId(), RANDOM.nextInt(total))));
-        } else {
-          player.sendSystemMessage(Component.literal("wow, can't believe you got hurt by a " + source.getMsgId()));
         }
       }
     }
