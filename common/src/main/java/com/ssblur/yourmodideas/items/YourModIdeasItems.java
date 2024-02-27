@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import org.intellij.lang.annotations.Identifier;
 
@@ -29,6 +30,9 @@ public class YourModIdeasItems {
     new BucketedBlock(new Item.Properties()));
   public static final RegistrySupplier<Item> PLAYER_BOW = ITEMS.register("player_bow", () ->
     new PlayerBow(new Item.Properties().durability(50).arch$tab(TAB)));
+  public static final RegistrySupplier<Item> MAYONNAISE = ITEMS.register("mayonnaise", () ->
+    new MayonnaiseItem(new Item.Properties().arch$tab(TAB)));
+
   public static final RegistrySupplier<Item> FROGGY_CHAIR = ITEMS.register("froggy_chair", () ->
     new BlockItem(YourModIdeasBlocks.FROGGY_CHAIR.get(), new Item.Properties().arch$tab(TAB)));
   public static final RegistrySupplier<Item> EVIL_FROGGY_CHAIR = ITEMS.register("evil_froggy_chair", () ->

@@ -2,6 +2,7 @@ package com.ssblur.yourmodideas;
 
 import com.google.common.base.Suppliers;
 import com.ssblur.yourmodideas.blocks.YourModIdeasBlocks;
+import com.ssblur.yourmodideas.effect.YourModIdeasEffects;
 import com.ssblur.yourmodideas.enchantments.YourModIdeasEnchantments;
 import com.ssblur.yourmodideas.events.EntitySpawnedEvent;
 import com.ssblur.yourmodideas.events.EntityTickEvent;
@@ -36,5 +37,6 @@ public class YourModIdeas {
     YourModIdeasItems.register();
     YourModIdeasEnchantments.register();
     YourModIdeasRecipes.register();
+    YourModIdeasEffects.register();
   }
 }
