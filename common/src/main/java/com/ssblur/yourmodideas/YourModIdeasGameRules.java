@@ -40,10 +40,12 @@ public class YourModIdeasGameRules {
   public static Key<BooleanValue> INVENTORY_SHIFT;
   public static Key<BooleanValue> DEDICATED_SLOTS;
   public static Key<BooleanValue> TEDIOUS_DIAMONDS;
+  public static Key<BooleanValue> TOOLS_SLOW_AS_THEY_BREAK;
 
 
   public static boolean UNMENDING_ENCHANT_FLAG;
   public static boolean EAT_SAND_FLAG;
+  public static boolean TOOLS_SLOW_AS_THEY_BREAK_FLAG;
 
   public static void init() {
     EVIL_FOXES = register("yourModIdeas:evilFoxes");
@@ -62,6 +64,7 @@ public class YourModIdeasGameRules {
     INVENTORY_SHIFT = register("yourModIdeas:inventoryShift");
     DEDICATED_SLOTS = register("yourModIdeas:dedicatedSlots", true);
     TEDIOUS_DIAMONDS = register("yourModIdeas:tediousDiamonds");
+    TOOLS_SLOW_AS_THEY_BREAK = register("yourModIdeas:toolsSlowAsTheyBreak");
 
 
     HELL_MODE = register("yourModIdeas:hellMode", true);

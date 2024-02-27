@@ -10,5 +10,6 @@ public class ServerTickEvent implements TickEvent.ServerLevelTick {
   public void tick(ServerLevel instance) {
     YourModIdeasGameRules.UNMENDING_ENCHANT_FLAG = instance.getGameRules().getBoolean(YourModIdeasGameRules.UNMENDING_ENCHANT);
     YourModIdeasGameRules.EAT_SAND_FLAG = instance.getGameRules().getBoolean(YourModIdeasGameRules.EAT_SAND);
+    YourModIdeasGameRules.TOOLS_SLOW_AS_THEY_BREAK_FLAG = instance.getGameRules().getBoolean(YourModIdeasGameRules.TOOLS_SLOW_AS_THEY_BREAK);
   }
 }
