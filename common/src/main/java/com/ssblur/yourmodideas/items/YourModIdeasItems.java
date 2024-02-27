@@ -37,6 +37,26 @@ public class YourModIdeasItems {
     new BlockItem(YourModIdeasBlocks.ERROR_BLOCK.get(), new Item.Properties().arch$tab(TAB)));
   public static final RegistrySupplier<Item> MISSING_TEXTURE_BLOCK = ITEMS.register("missing_texture_block", () ->
     new BlockItem(YourModIdeasBlocks.MISSING_TEXTURE_BLOCK.get(), new Item.Properties().arch$tab(TAB)));
+
+  public static final RegistrySupplier<Item> CHARCOAL_1 = ITEMS.register("charcoal_1", () ->
+    new Item(new Item.Properties()));
+  public static final RegistrySupplier<Item> CHARCOAL_2 = ITEMS.register("charcoal_2", () ->
+    new Item(new Item.Properties()));
+  public static final RegistrySupplier<Item> CHARCOAL_3 = ITEMS.register("charcoal_3", () ->
+    new Item(new Item.Properties()));
+  public static final RegistrySupplier<Item> CHARCOAL_4 = ITEMS.register("charcoal_4", () ->
+    new Item(new Item.Properties()));
+  public static final RegistrySupplier<Item> CHARCOAL_5 = ITEMS.register("charcoal_5", () ->
+    new Item(new Item.Properties()));
+  public static final RegistrySupplier<Item> CHARCOAL_6 = ITEMS.register("charcoal_6", () ->
+    new Item(new Item.Properties()));
+  public static final RegistrySupplier<Item> CHARCOAL_7 = ITEMS.register("charcoal_7", () ->
+    new Item(new Item.Properties()));
+  public static final RegistrySupplier<Item> CHARCOAL_8 = ITEMS.register("charcoal_8", () ->
+    new Item(new Item.Properties()));
+  public static final RegistrySupplier<Item> CHARCOAL_9 = ITEMS.register("charcoal_9", () ->
+    new Item(new Item.Properties()));
+
   public static void register() {
     TABS.register();
     ITEMS.register();

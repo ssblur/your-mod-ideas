@@ -1,0 +1,21 @@
+{
+  "type": "yourmodideas:rule_shaped",
+  "rule": "yourModIdeas:tediousDiamonds",
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ccc",
+      "ccc",
+      "ccc"
+    ],
+    "key": {
+      "c": {
+        "item": "yourmodideas:charcoal_4"
+      }
+    },
+    "result": {
+      "item": "yourmodideas:charcoal_5",
+      "count": 1
+    }
+  }
+}

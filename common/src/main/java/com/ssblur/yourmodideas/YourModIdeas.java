@@ -7,6 +7,7 @@ import com.ssblur.yourmodideas.events.EntitySpawnedEvent;
 import com.ssblur.yourmodideas.events.EntityTickEvent;
 import com.ssblur.yourmodideas.events.YourModIdeasEvents;
 import com.ssblur.yourmodideas.items.YourModIdeasItems;
+import com.ssblur.yourmodideas.recipes.YourModIdeasRecipes;
 import dev.architectury.event.events.common.EntityEvent;
 import dev.architectury.event.events.common.TickEvent;
 import dev.architectury.registry.CreativeTabRegistry;
@@ -34,5 +35,6 @@ public class YourModIdeas {
     YourModIdeasBlocks.register();
     YourModIdeasItems.register();
     YourModIdeasEnchantments.register();
+    YourModIdeasRecipes.register();
   }
 }

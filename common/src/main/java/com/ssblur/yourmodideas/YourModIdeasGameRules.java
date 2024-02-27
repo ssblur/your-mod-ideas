@@ -10,7 +10,9 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.function.BiConsumer;
 
 public class YourModIdeasGameRules {
@@ -37,6 +39,7 @@ public class YourModIdeasGameRules {
   public static Key<BooleanValue> SUN_BLINDNESS;
   public static Key<BooleanValue> INVENTORY_SHIFT;
   public static Key<BooleanValue> DEDICATED_SLOTS;
+  public static Key<BooleanValue> TEDIOUS_DIAMONDS;
 
 
   public static boolean UNMENDING_ENCHANT_FLAG;
@@ -58,6 +61,8 @@ public class YourModIdeasGameRules {
     SUN_BLINDNESS = register("yourModIdeas:sunBlindness");
     INVENTORY_SHIFT = register("yourModIdeas:inventoryShift");
     DEDICATED_SLOTS = register("yourModIdeas:dedicatedSlots", true);
+    TEDIOUS_DIAMONDS = register("yourModIdeas:tediousDiamonds");
+
 
     HELL_MODE = register("yourModIdeas:hellMode", true);
   }
@@ -67,6 +72,39 @@ public class YourModIdeasGameRules {
     if(level.isClientSide)
       return SyncedRules.getValue(HELL_MODE) || SyncedRules.getValue(key);
     return level.getGameRules().getBoolean(HELL_MODE) || level.getGameRules().getBoolean(key);
+  }
+
+  private static final Map<String, Key<BooleanValue>> keyMap = new HashMap<>();
+  public static boolean getValue(Level level, String key) {
+    if(level == null) return false;
+    if(keyMap.containsKey(key))
+      return getValue(level, keyMap.get(key));
+    if(level.isClientSide && SyncedRules.getValue(HELL_MODE))
+      return true;
+    if(level.getGameRules().getBoolean(HELL_MODE))
+      return true;
+
+    var visitor = new GameRuleVisitor(key);
+    GameRules.visitGameRuleTypes(visitor);
+    if(visitor.key != null) {
+      keyMap.put(key, visitor.key);
+      return getValue(level, visitor.key);
+    }
+    throw new RuntimeException("Could not find gamerule \"%s\"".formatted(key));
+  }
+
+  public static class GameRuleVisitor implements GameRules.GameRuleTypeVisitor {
+    String id;
+    GameRules.Key<GameRules.BooleanValue> key;
+    public GameRuleVisitor(String key) {
+      this.id = key;
+    }
+
+    @Override
+    public void visitBoolean(GameRules.Key<GameRules.BooleanValue> key, GameRules.Type<GameRules.BooleanValue> type) {
+      if(key.toString().equals(this.id))
+        this.key = key;
+    }
   }
 
   private static Key<BooleanValue> register(String key) {
@@ -85,4 +123,5 @@ public class YourModIdeasGameRules {
   private static BiConsumer<MinecraftServer, BooleanValue> syncHelper(String key) {
     return (server, value) -> SyncedRules.send(server.getPlayerList().getPlayers(), key, value.get());
   }
+
 }
