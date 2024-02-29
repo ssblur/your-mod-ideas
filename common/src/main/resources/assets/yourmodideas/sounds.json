@@ -4,5 +4,11 @@
     "sounds": [
       "yourmodideas:fnaf_goat_horn"
     ]
+  },
+  "dad": {
+    "subtitle": "subtitles.entity.dad",
+    "sounds": [
+      "yourmodideas:dad"
+    ]
   }
 }

@@ -7,7 +7,12 @@
   "block.yourmodideas.error_block": "models/error.mdl",
   "block.yourmodideas.mayonnaise": "Jar of Mayonnaise",
 
+  "entity.yourmodideas.dad": "Dad",
+
   "effect.yourmodideas.mayo": "Mayonnaiseful",
+
+  "subtitles.entity.dad": "Are ya winning son?",
+  "subtitles.item.goat_horn.play": "Toreador March Horn",
 
   "item.yourmodideas.milk": "%1$s Milk",
   "item.yourmodideas.bucketed_block": "Bucket o' %1$s",
