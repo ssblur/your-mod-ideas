@@ -2,8 +2,10 @@ package com.ssblur.yourmodideas.entity;
 
 import com.ssblur.yourmodideas.YourModIdeas;
 import com.ssblur.yourmodideas.entity.renderer.DadRenderer;
+import com.ssblur.yourmodideas.entity.renderer.NightmareRenderer;
 import dev.architectury.platform.Platform;
 import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
+import dev.architectury.registry.level.biome.BiomeModifications;
 import dev.architectury.registry.level.entity.EntityAttributeRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -13,8 +15,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.animal.horse.SkeletonHorse;
 
 public class YourModIdeasEntities {
   public static final String MOD_ID = YourModIdeas.MOD_ID;
@@ -27,6 +31,13 @@ public class YourModIdeasEntities {
       DadEntity::new,
       MobCategory.MONSTER
     ).sized(1.5f, 1.5f).build("dad")
+  );
+  public static final RegistrySupplier<EntityType<NightmareEntity>> NIGHTMARE = ENTITY_TYPES.register(
+    "nightmare",
+    () -> EntityType.Builder.of(
+      NightmareEntity::new,
+      MobCategory.CREATURE
+    ).sized(1.3964844f, 1.6f).clientTrackingRange(10).build("nightmare")
   );
 
   public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(MOD_ID, Registries.SOUND_EVENT);
@@ -52,6 +63,7 @@ public class YourModIdeasEntities {
           .add(Attributes.ATTACK_SPEED, 6)
           .add(Attributes.MOVEMENT_SPEED, 0.24f)
     );
+    EntityAttributeRegistry.register(NIGHTMARE, SkeletonHorse::createAttributes);
 
     if(Platform.getEnv() == EnvType.CLIENT)
       registerClient();
@@ -59,5 +71,6 @@ public class YourModIdeasEntities {
 
   public static void registerClient() {
     EntityRendererRegistry.register(DAD, DadRenderer::new);
+    EntityRendererRegistry.register(NIGHTMARE, NightmareRenderer::new);
   }
 }

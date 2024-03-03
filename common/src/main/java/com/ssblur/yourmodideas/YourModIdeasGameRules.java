@@ -43,6 +43,7 @@ public class YourModIdeasGameRules {
   public static Key<BooleanValue> TOOLS_SLOW_AS_THEY_BREAK;
   public static Key<BooleanValue> DAD;
   public static Key<BooleanValue> OVERWORLD_PORTAL;
+  public static Key<BooleanValue> NIGHTMARE;
 
 
   public static boolean UNMENDING_ENCHANT_FLAG;
@@ -69,7 +70,7 @@ public class YourModIdeasGameRules {
     TOOLS_SLOW_AS_THEY_BREAK = register("yourModIdeas:toolsSlowAsTheyBreak");
     DAD = register("yourModIdeas:dad");
     OVERWORLD_PORTAL = register("yourModIdeas:overworldPortal");
-
+    NIGHTMARE = register("yourModIdeas:nightmare");
 
     HELL_MODE = register("yourModIdeas:hellMode", true);
   }
