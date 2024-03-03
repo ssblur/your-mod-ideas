@@ -1,6 +1,7 @@
 package com.ssblur.yourmodideas;
 
-import com.ssblur.yourmodideas.blocks.YourModIdeasBlocks;
+import com.ssblur.yourmodideas.block.YourModIdeasBlocks;
+import com.ssblur.yourmodideas.blockentity.YourModIdeasBlockEntities;
 import com.ssblur.yourmodideas.effect.YourModIdeasEffects;
 import com.ssblur.yourmodideas.enchantments.YourModIdeasEnchantments;
 import com.ssblur.yourmodideas.entity.YourModIdeasEntities;
@@ -20,5 +21,6 @@ public class YourModIdeas {
     YourModIdeasRecipes.register();
     YourModIdeasEffects.register();
     YourModIdeasEntities.register();
+    YourModIdeasBlockEntities.register();
   }
 }

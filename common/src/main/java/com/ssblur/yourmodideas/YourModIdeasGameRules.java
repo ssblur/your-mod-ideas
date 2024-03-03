@@ -42,6 +42,7 @@ public class YourModIdeasGameRules {
   public static Key<BooleanValue> TEDIOUS_DIAMONDS;
   public static Key<BooleanValue> TOOLS_SLOW_AS_THEY_BREAK;
   public static Key<BooleanValue> DAD;
+  public static Key<BooleanValue> OVERWORLD_PORTAL;
 
 
   public static boolean UNMENDING_ENCHANT_FLAG;
@@ -67,6 +68,7 @@ public class YourModIdeasGameRules {
     TEDIOUS_DIAMONDS = register("yourModIdeas:tediousDiamonds");
     TOOLS_SLOW_AS_THEY_BREAK = register("yourModIdeas:toolsSlowAsTheyBreak");
     DAD = register("yourModIdeas:dad");
+    OVERWORLD_PORTAL = register("yourModIdeas:overworldPortal");
 
 
     HELL_MODE = register("yourModIdeas:hellMode", true);

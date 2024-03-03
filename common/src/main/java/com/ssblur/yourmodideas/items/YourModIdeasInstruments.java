@@ -1,16 +1,11 @@
 package com.ssblur.yourmodideas.items;
 
 import com.ssblur.yourmodideas.YourModIdeas;
-import com.ssblur.yourmodideas.blocks.YourModIdeasBlocks;
-import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.*;
 
 public class YourModIdeasInstruments {

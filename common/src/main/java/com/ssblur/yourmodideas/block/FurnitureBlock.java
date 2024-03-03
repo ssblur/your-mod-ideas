@@ -1,4 +1,4 @@
-package com.ssblur.yourmodideas.blocks;
+package com.ssblur.yourmodideas.block;
 
 import com.mojang.serialization.MapCodec;
 import dev.architectury.platform.Platform;

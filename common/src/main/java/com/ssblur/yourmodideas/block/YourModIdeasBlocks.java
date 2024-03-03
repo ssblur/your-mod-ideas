@@ -1,4 +1,4 @@
-package com.ssblur.yourmodideas.blocks;
+package com.ssblur.yourmodideas.block;
 
 import com.ssblur.yourmodideas.YourModIdeas;
 import dev.architectury.registry.registries.DeferredRegister;
@@ -21,6 +21,8 @@ public class YourModIdeasBlocks {
     new FurnitureBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)));
   public static final RegistrySupplier<Block> MISSING_TEXTURE_BLOCK = BLOCKS.register("missing_texture_block", () ->
     new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)));
+  public static final RegistrySupplier<Block> OVERWORLD_PORTAL = BLOCKS.register("overworld_portal", () ->
+    new OverworldPortalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BEDROCK).noCollission()));
 
   public static void register() {
     BLOCKS.register();

@@ -1,21 +1,17 @@
 package com.ssblur.yourmodideas.items;
 
 import com.ssblur.yourmodideas.YourModIdeas;
-import com.ssblur.yourmodideas.blocks.YourModIdeasBlocks;
+import com.ssblur.yourmodideas.block.YourModIdeasBlocks;
 import dev.architectury.platform.Platform;
 import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.item.ItemPropertiesRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
-import org.intellij.lang.annotations.Identifier;
 
 public class YourModIdeasItems {
   public static final String MOD_ID = YourModIdeas.MOD_ID;
