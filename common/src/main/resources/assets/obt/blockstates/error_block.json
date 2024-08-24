@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "obt:block/error_block",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "obt:block/error_block",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "obt:block/error_block",
+      "y": 0
+    },
+    "facing=west": {
+      "model": "obt:block/error_block",
+      "y": 90
+    }
+  }
+}

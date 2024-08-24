@@ -1,0 +1,14 @@
+{
+  "fnaf_goat_horn": {
+    "subtitle": "subtitles.item.goat_horn.play",
+    "sounds": [
+      "obt:fnaf_goat_horn"
+    ]
+  },
+  "dad": {
+    "subtitle": "subtitles.entity.dad",
+    "sounds": [
+      "obt:dad"
+    ]
+  }
+}

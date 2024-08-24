@@ -1,0 +1,21 @@
+{
+  "type": "obt:rule_shaped",
+  "rule": "obt:tediousDiamonds",
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ccc",
+      "ccc",
+      "ccc"
+    ],
+    "key": {
+      "c": {
+        "item": "obt:charcoal_1"
+      }
+    },
+    "result": {
+      "item": "obt:charcoal_2",
+      "count": 1
+    }
+  }
+}

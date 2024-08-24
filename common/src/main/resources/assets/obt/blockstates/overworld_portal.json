@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "obt:block/overworld_portal"
+    }
+  }
+}

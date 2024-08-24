@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "yourmodideas",
+  "id": "obt",
   "version": "${version}",
-  "name": "Your Mod Ideas",
+  "name": "One Billion Things",
   "description": "I put your ideas in the game!",
   "authors": [
     "SSBlur"
@@ -11,17 +11,17 @@
     "homepage": "https://github.com/ssblur/your-mod-ideas",
     "sources": "https://github.com/ssblur/your-mod-ideas"
   },
-  "license": "WTFPL",
-  "icon": "assets/yourmodideas/icon.png",
+  "license": "CC0",
+  "icon": "assets/obt/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.ssblur.yourmodideas.fabric.YourModIdeasFabric"
+      "com.ssblur.obt.fabric.OBTModFabric"
     ]
   },
   "mixins": [
-    "yourmodideas-common.mixins.json",
-    "yourmodideas.mixins.json"
+    "obt-common.mixins.json",
+    "obt.mixins.json"
   ],
   "depends": {
     "fabric": "*",

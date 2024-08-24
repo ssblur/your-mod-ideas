@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "com.ssblur.obt.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ItemMixin",
+    "PortaltemMixin",
+    "RemoveDisabledEnchantsMixin"
+  ],
+  "client": [
+    "DrawInventoryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.1"
+}

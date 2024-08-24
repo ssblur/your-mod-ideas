@@ -1,0 +1,6 @@
+{
+    "parent": "obt:item/player_bow",
+    "textures": {
+        "layer0": "obt:item/player_bow_pulling_2"
+    }
+}

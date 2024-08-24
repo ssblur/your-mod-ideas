@@ -3,7 +3,7 @@ architectury {
 }
 
 loom {
-  accessWidenerPath = file("src/main/resources/yourmodideas.accesswidener")
+  accessWidenerPath = file("src/main/resources/obt.accesswidener")
 }
 
 dependencies {
